@@ -1,3 +1,5 @@
+<%@page import="java.text.SimpleDateFormat"%>
+<%@ page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -25,17 +27,27 @@
                 Welcome to Web Shopping Mall
             </h1>
         </div>
-      </div>
+    </div>
 
-      <div class="container">
-          <div class="text-center">
-              <h3>Welcome to Web Market!</h3>
-          </div>
-      </div>
-      <footer class="container">
-          <!-- 카피라이트 -->
-          <p>&copy; WebMarket</p>
-      </footer>
+    <div class="container">
+        <div class="text-center">
+            <h3>Welcome to Web Market!</h3>
+            <!-- java를 쓰기 위한 태그 -->
+            <%
+            Date now = new Date();
+            SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
+            %>
+            현재 접속 시각: <%= format.format(now) %>
+          
+        </div>
+    </div>
+
+
+
+    <footer class="container">
+        <!-- 카피라이트 -->
+        <p>&copy; WebMarket</p>
+    </footer>
    
 </body>
 </html>
