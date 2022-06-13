@@ -9,20 +9,7 @@ import java.util.Objects;
  * 4. 무지성 toString() : 디버깅 용도, 
  * 5. 필요하면 equals / hashCode 재정의(오버라이드)*/
 
-public class Product extends Object {	//Object는 대왕 클래스
-	public static void main(String[] args) {
-		Product product = new Product("33","33",11);
-		System.out.println(product);
-		
-		Product product2 = new Product("33","33",11);
-		System.out.println(product2);
-		
-		
-		System.out.println(product.hashCode() == product2.hashCode());	//true
-		System.out.println(product.equals( product2));	//true
-		System.out.println(product == product2); 	//false : 레퍼런스 비교
-		
-	}
+public class Product {
 	
 	//객체를 private으로 선언
 	private String id;	//상품 id
