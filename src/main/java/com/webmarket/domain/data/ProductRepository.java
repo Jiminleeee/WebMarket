@@ -29,16 +29,16 @@ public class ProductRepository {
 		phone.setCondition("New");
 		
 		Product notebook = new Product("P1235", "LG PC 그램", 1500000);
-		notebook.setDescription("!4.7-inch, 1334x750 Retina HD display");
-		notebook.setCategory("!Smart Phone");
-		notebook.setManufacturer("!Apple");
+		notebook.setDescription("13.3-inch, IPS LED display, 5rd Generation Intel Core Processors");
+		notebook.setCategory("Notebook");
+		notebook.setManufacturer("LG");
 		notebook.setUnitsInStock(1000);
 		notebook.setCondition("Refubished");
 		
 		Product tablet = new Product("P1236", "Galaxy Tab S", 900000);
-		tablet.setDescription("?4.7-inch, 1334x750 Retina HD display");
-		tablet.setCategory("?Smart Phone");
-		tablet.setManufacturer("?Apple");
+		tablet.setDescription("212.8*125.6*6.6mm, Super AMOLED display, Octa-Core processor");
+		tablet.setCategory("Tablet");
+		tablet.setManufacturer("Samsung");
 		tablet.setUnitsInStock(1000);
 		tablet.setCondition("Old");
 		

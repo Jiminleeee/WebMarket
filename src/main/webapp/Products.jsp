@@ -34,7 +34,7 @@
             
            // String name = (String) session.getAttribute("name");
            // int age = (int) session.getAttribute("age");
-            out.print(session.getAttribute("foods"));
+            //out.print(session.getAttribute("foods"));
             
             //싱글턴 패턴
             ProductRepository repository = ProductRepository.getInstance();
