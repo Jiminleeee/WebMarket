@@ -1,3 +1,5 @@
+<%@page import="java.util.List"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.webmarket.domain.data.ProductRepository" %>
 <%@page import="com.webmarket.domain.model.Product" %>
 <%@page import="java.text.SimpleDateFormat"%>
@@ -32,6 +34,15 @@
         SimpleDateFormat format = new SimpleDateFormat("hh:mm:ss a");
         %>
         현재 접속 시각: <%= format.format(now) %>
+        
+        <%
+        List<String> foods = new ArrayList<>();
+        foods.add("백반");
+        foods.add("백반2");
+        foods.add("백반3");
+        session.setAttribute("foods", "food");
+        session.setMaxInactiveInterval(5);
+        %>
       </div>
     </div>
 
