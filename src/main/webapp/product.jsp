@@ -4,8 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<jsp:useBean id="repository"
-	class="com.webmarket.domain.data.ProductRepository" scope="session"></jsp:useBean>
+
 <html>
 
 <meta charset="UTF-8">
@@ -27,6 +26,7 @@
 	</div>
 
 	<%
+	ProductRepository repository = ProductRepository.getInstance();
 	String id = request.getParameter("id");
 	Product product = repository.getProductById(id);
 	%>

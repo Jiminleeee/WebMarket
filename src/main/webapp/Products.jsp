@@ -4,8 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<jsp:useBean id="repository"
-	class="com.webmarket.domain.data.ProductRepository" scope="session"></jsp:useBean>
+
 <html>
 
 <head>
@@ -30,6 +29,7 @@
 	<div class="container">
 		<div class="row" align="center">
             <%
+            ProductRepository repository = ProductRepository.getInstance();
             List<Product> products = repository.getAllProducts();
                         for (int i = 0; i < products.size(); i++) {
                         	Product product = products.get(i);
