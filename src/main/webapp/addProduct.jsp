@@ -54,7 +54,7 @@
 				<!-- sm : 작은 기기에서의 반응형 -->
 				<label class="col-sm-2">상세 정보</label>
 					<div class="col-sm-3">
-						<textarea type="text" name="description" class="form-control"></textarea>
+						<textarea name="description" class="form-control"></textarea>
 					</div>
 			</div>
 
