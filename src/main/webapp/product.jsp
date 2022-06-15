@@ -1,4 +1,5 @@
-<%@page import="com.webmarket.domain.data.ProductRepository"%>
+<%@page import="com.webmarket.domain.repository.ProductRepository"%>
+<%@page import="com.webmarket.domain.data.ProductRepositoryimpl"%>
 <%@page import="com.webmarket.domain.model.Product"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -27,8 +28,8 @@
 
 	<%
 	ProductRepository repository = ProductRepository.getInstance();
-	String id = request.getParameter("id");
-	Product product = repository.getProductById(id);
+		String id = request.getParameter("id");
+		Product product = repository.getProductById(id);
 	%>
 	<div class="container">
 		<div class="row">

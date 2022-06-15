@@ -1,6 +1,6 @@
 <%@page import="java.util.List"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.webmarket.domain.data.ProductRepository" %>
+<%@page import="com.webmarket.domain.data.ProductRepositoryimpl" %>
 <%@page import="com.webmarket.domain.model.Product" %>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@ page import="java.util.Date"%>
