@@ -30,28 +30,20 @@
 
 	<div class="container">
 		<div class="row" align="center">
+            <%
+                List<Product> products = (List<Product>) session.getAttribute("products");
+            
+                for (int i = 0; i < products.size(); i++) {
+                    Product product = products.get(i);
+            %>
+				<div class="col-md-4">
+					<h3><%= product.getName() %></h3>
+					<p><%= product.getDescription() %></p>
+					<p><%= product.getUnitPrice() %>원</p>
+					<p><a href="product.jsp?id=<%= product.getId() %>" class="btn btn-secondary">상세 정보 &raquo;</a></p>
+				</div>
 			<%
-			
-			out.print(session.getAttribute("products"));
-			
-			//싱글턴 패턴
-				ProductRepository repository = ProductRepository.getInstance();
-				List<Product> products = repository.getAllProducts();
-				for (int i = 0; i < products.size(); i++) {
-					Product product = products.get(i);
-			%>
-			<div class="col-md-4">
-				<h3><%=product.getName()%></h3>
-				<p><%=product.getDescription()%></p>
-				<p><%=product.getUnitPrice()%>원
-				</p>
-				<p>
-					<a href="product.jsp?id=<%=product.getId()%>"
-						class="btn btn-secondary">상세 정보 &raquo;</a>
-				</p>
-			</div>
-			<%
-			}
+            }
 			%>
 		</div>
 	</div>
