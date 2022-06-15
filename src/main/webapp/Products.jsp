@@ -31,6 +31,9 @@
 	<div class="container">
 		<div class="row" align="center">
 			<%
+			
+			out.print(session.getAttribute("products"));
+			
 			//싱글턴 패턴
 				ProductRepository repository = ProductRepository.getInstance();
 				List<Product> products = repository.getAllProducts();

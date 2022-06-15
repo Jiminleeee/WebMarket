@@ -10,7 +10,8 @@ import com.webmarket.domain.model.Product;
 public interface ProductRepository {
     
     public static ProductRepository getInstance() {
-        return new ProductRepositoryDbImpl(new MySqlProductDaoImpl());
+//    	return ProductRepositoryimpl.getInstance(); 	//메모리
+        return new ProductRepositoryDbImpl(new MySqlProductDaoImpl());	//DB
     }
     
     public List<Product> getAllProducts();
